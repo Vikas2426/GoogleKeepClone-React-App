@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
 import CreateArea from "./CreateArea";
 import './styles.css';
 import notes from '../notes.js';
@@ -30,15 +29,16 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app">
       <Header searching={search} />
       <CreateArea createNote={addNote} />
       {/* eslint-disable-next-line  */}
-    
-      <NotesList notes={notesList.filter((note) =>
-        (note.title.toLowerCase().includes(searchItem) || note.content.toLowerCase().includes(searchItem)))
-      } deleteNote={deleteNote} />
-      <Footer />
+      <div className='app-body'>
+        <NotesList notes={notesList.filter((note) =>
+          (note.title.toLowerCase().includes(searchItem) || note.content.toLowerCase().includes(searchItem)))
+        } deleteNote={deleteNote} />
+      </div>
+      {/* <Footer className='footer' /> */}
     </div>
   );
 }
