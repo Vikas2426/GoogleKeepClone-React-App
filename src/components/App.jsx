@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Note from "./Note";
 import CreateArea from "./CreateArea";
 import './styles.css';
 import notes from '../notes.js';
+import NotesList from './NotesList.jsx';
 
 function App() {
-  const [notesList, setNotesList] = useState([...notes]);
+  const [notesList, setNotesList] = useState(notes);
+  const [searchItem, setSearchItem] = useState("");
 
   const addNote = (newTitle, newContent) => {
     const newNote = {
@@ -24,24 +25,19 @@ function App() {
       prevValues.filter((note, index) => index !== id)
     );
   };
+  const search = searchText => {
+    setSearchItem(searchText);
+  }
 
   return (
     <div>
-      <Header />
+      <Header searching={search} />
       <CreateArea createNote={addNote} />
       {/* eslint-disable-next-line  */}
-      {notesList.map((note, index) => {
-        if (note.title !== "" || note.content !== "")
-          return (
-            <Note
-              key={index}
-              id={index}
-              title={note.title}
-              content={note.content}
-              delete={deleteNote}
-            />
-          );
-      })}
+    
+      <NotesList notes={notesList.filter((note) =>
+        (note.title.toLowerCase().includes(searchItem) || note.content.toLowerCase().includes(searchItem)))
+      } deleteNote={deleteNote} />
       <Footer />
     </div>
   );

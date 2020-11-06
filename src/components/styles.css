@@ -53,31 +53,36 @@ header h1 {
   font-weight: 200;
 }
 
-
-
 #search-bar-container {
   margin-top: 0.5%;
   height: 100%;
   width: 20%;
 }
 
-#search-bar {
+.search-bar {
   height: 100%;
   width: 100%;
   display: flex;
-  background: var(--main-surface-color);
-  color: var(--main-text-color);
-  padding: 2%;
+  background: rgba(128, 128, 128, 0.573);
+  color: rgba(235, 235, 235, 0.855);
+  padding: 0.5%;
   border-radius: 5px;
 }
 
-#search-bar > input {
+.search-bar > input {
   flex: 1;
   padding: 2%;
   font-size: 1.1em;
   border: none;
-  background: var(--main-surface-color);
+  background: rgba(128, 128, 128, 0.145);
+  color: var(--main-text-color);
   outline: none;
+  overflow-x: hidden;
+}
+
+.bg-color {
+  background: var(--main-surface-color);
+  color: var(--main-text-color);
 }
 
 footer {

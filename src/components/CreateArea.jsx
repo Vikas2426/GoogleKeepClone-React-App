@@ -45,7 +45,7 @@ function CreateArea(props) {
         />
         <Zoom in="true">
           <Fab className="form-button" onClick={handleClick}>
-            <AddIcon fontSize="medium" />
+            <AddIcon />
           </Fab>
         </Zoom>
       </form>
