@@ -1,13 +1,15 @@
 import React from "react";
-import NoteIcon from "@material-ui/icons/Note";
+import ListAltIcon from '@material-ui/icons/ListAlt';
+import SearchBar from "./SearchBar";
 
 function Header() {
   return (
     <header>
       <h1>
-        <NoteIcon />
+        <ListAltIcon fontSize='large' />
         Notes
       </h1>
+      <SearchBar></SearchBar>
     </header>
   );
 }

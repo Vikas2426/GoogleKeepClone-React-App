@@ -1,11 +1,14 @@
+
 import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import './styles.css';
+import notes from '../notes.js';
 
 function App() {
-  const [notesList, setNotesList] = useState([{ title: "", content: "" }]);
+  const [notesList, setNotesList] = useState([...notes]);
 
   const addNote = (newTitle, newContent) => {
     const newNote = {

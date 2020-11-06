@@ -32,20 +32,52 @@ body {
   background: var(--main-bg-color);
   background-image: var(--main-bg-img);
   padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background-color: #f5ba13;
   background-image: url("https://www.transparenttextures.com/patterns/twinkle-twinkle.png");
-  margin: auto -16px;
-  padding: 8px 32px;
+  padding: 6px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+}
+
+
+
+#search-bar-container {
+  margin-top: 0.5%;
+  height: 100%;
+  width: 20%;
+}
+
+#search-bar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: var(--main-surface-color);
+  color: var(--main-text-color);
+  padding: 2%;
+  border-radius: 5px;
+}
+
+#search-bar > input {
+  flex: 1;
+  padding: 2%;
+  font-size: 1.1em;
+  border: none;
+  background: var(--main-surface-color);
+  outline: none;
 }
 
 footer {
