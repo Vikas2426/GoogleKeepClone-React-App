@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cef9b3211b30ae7ea978e490cd78e4ff",
+    "revision": "991d5356472fb81c9a70c4775a34c4e8",
     "url": "/GoogleKeepClone-React-App/index.html"
   },
   {
-    "revision": "d9a57c5faefaddb90da7",
+    "revision": "69bb7b9087f2b6b1b12a",
     "url": "/GoogleKeepClone-React-App/static/css/main.bda34f74.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GoogleKeepClone-React-App/static/js/2.5395a334.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d9a57c5faefaddb90da7",
-    "url": "/GoogleKeepClone-React-App/static/js/main.40b82f92.chunk.js"
+    "revision": "69bb7b9087f2b6b1b12a",
+    "url": "/GoogleKeepClone-React-App/static/js/main.f88ae5e9.chunk.js"
   },
   {
     "revision": "776c8b0b734817c9effb",
